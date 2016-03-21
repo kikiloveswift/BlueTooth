@@ -16,7 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    NSArray *centralManageridentifier = [launchOptions objectForKey:UIApplicationLaunchOptionsBluetoothCentralsKey];
+    NSLog(@"centralID is %@",centralManageridentifier);
+    
     return YES;
 }
 

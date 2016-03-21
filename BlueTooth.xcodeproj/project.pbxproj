@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B97C30C90A628A99689C81DE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C0857796A6A7230A11E96E /* libPods.a */; };
 		FC3F3A731C9AA39D0027D5D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3F3A721C9AA39D0027D5D0 /* main.m */; };
 		FC3F3A761C9AA39D0027D5D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3F3A751C9AA39D0027D5D0 /* AppDelegate.m */; };
-		FC3F3A791C9AA39D0027D5D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3F3A781C9AA39D0027D5D0 /* ViewController.m */; };
 		FC3F3A7C1C9AA39D0027D5D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3F3A7A1C9AA39D0027D5D0 /* Main.storyboard */; };
 		FC3F3A7F1C9AA39D0027D5D0 /* BlueTooth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC3F3A7D1C9AA39D0027D5D0 /* BlueTooth.xcdatamodeld */; };
 		FC3F3A811C9AA39E0027D5D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3F3A801C9AA39E0027D5D0 /* Assets.xcassets */; };
-		FC3F3A841C9AA39E0027D5D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3F3A821C9AA39E0027D5D0 /* LaunchScreen.storyboard */; };
 		FC3F3A8F1C9AA39E0027D5D0 /* BlueToothTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3F3A8E1C9AA39E0027D5D0 /* BlueToothTests.m */; };
 		FC3F3A9A1C9AA39E0027D5D0 /* BlueToothUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3F3A991C9AA39E0027D5D0 /* BlueToothUITests.m */; };
+		FC3F3AA91C9AA44F0027D5D0 /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3F3AA81C9AA44F0027D5D0 /* ItemViewController.m */; };
+		FC3F3AAC1C9AA4820027D5D0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3F3AAB1C9AA4820027D5D0 /* RootViewController.m */; };
+		FC3F3AAF1C9AA4900027D5D0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3F3AAE1C9AA4900027D5D0 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,16 +38,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A5926301A6D9C6D89D12001 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C5C0857796A6A7230A11E96E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0B71D82DA528F9F63662CA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FC3F3A6E1C9AA39D0027D5D0 /* BlueTooth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueTooth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3F3A721C9AA39D0027D5D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC3F3A741C9AA39D0027D5D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC3F3A751C9AA39D0027D5D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FC3F3A771C9AA39D0027D5D0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FC3F3A781C9AA39D0027D5D0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FC3F3A7B1C9AA39D0027D5D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC3F3A7E1C9AA39D0027D5D0 /* BlueTooth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BlueTooth.xcdatamodel; sourceTree = "<group>"; };
 		FC3F3A801C9AA39E0027D5D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FC3F3A831C9AA39E0027D5D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC3F3A851C9AA39E0027D5D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3F3A8A1C9AA39E0027D5D0 /* BlueToothTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlueToothTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3F3A8E1C9AA39E0027D5D0 /* BlueToothTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueToothTests.m; sourceTree = "<group>"; };
@@ -53,6 +55,13 @@
 		FC3F3A951C9AA39E0027D5D0 /* BlueToothUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlueToothUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3F3A991C9AA39E0027D5D0 /* BlueToothUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueToothUITests.m; sourceTree = "<group>"; };
 		FC3F3A9B1C9AA39E0027D5D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC3F3AA71C9AA44F0027D5D0 /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
+		FC3F3AA81C9AA44F0027D5D0 /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
+		FC3F3AAA1C9AA4820027D5D0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		FC3F3AAB1C9AA4820027D5D0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		FC3F3AAD1C9AA4900027D5D0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		FC3F3AAE1C9AA4900027D5D0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		FC9D34831C9AB80000196193 /* config.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97C30C90A628A99689C81DE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC03F10FB25982371D19BA21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A5926301A6D9C6D89D12001 /* Pods.debug.xcconfig */,
+				CD0B71D82DA528F9F63662CA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C442B70649C0BF0432517F28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5C0857796A6A7230A11E96E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC3F3A651C9AA39D0027D5D0 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +114,8 @@
 				FC3F3A8D1C9AA39E0027D5D0 /* BlueToothTests */,
 				FC3F3A981C9AA39E0027D5D0 /* BlueToothUITests */,
 				FC3F3A6F1C9AA39D0027D5D0 /* Products */,
+				AC03F10FB25982371D19BA21 /* Pods */,
+				C442B70649C0BF0432517F28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,11 +134,15 @@
 			children = (
 				FC3F3A741C9AA39D0027D5D0 /* AppDelegate.h */,
 				FC3F3A751C9AA39D0027D5D0 /* AppDelegate.m */,
-				FC3F3A771C9AA39D0027D5D0 /* ViewController.h */,
-				FC3F3A781C9AA39D0027D5D0 /* ViewController.m */,
+				FC9D34831C9AB80000196193 /* config.pch */,
+				FC3F3AA71C9AA44F0027D5D0 /* ItemViewController.h */,
+				FC3F3AA81C9AA44F0027D5D0 /* ItemViewController.m */,
+				FC3F3AAA1C9AA4820027D5D0 /* RootViewController.h */,
+				FC3F3AAB1C9AA4820027D5D0 /* RootViewController.m */,
+				FC3F3AAD1C9AA4900027D5D0 /* DetailViewController.h */,
+				FC3F3AAE1C9AA4900027D5D0 /* DetailViewController.m */,
 				FC3F3A7A1C9AA39D0027D5D0 /* Main.storyboard */,
 				FC3F3A801C9AA39E0027D5D0 /* Assets.xcassets */,
-				FC3F3A821C9AA39E0027D5D0 /* LaunchScreen.storyboard */,
 				FC3F3A851C9AA39E0027D5D0 /* Info.plist */,
 				FC3F3A7D1C9AA39D0027D5D0 /* BlueTooth.xcdatamodeld */,
 				FC3F3A711C9AA39D0027D5D0 /* Supporting Files */,
@@ -150,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC3F3A9E1C9AA39E0027D5D0 /* Build configuration list for PBXNativeTarget "BlueTooth" */;
 			buildPhases = (
+				23D6FE7579B140CCD3FFB5C7 /* Check Pods Manifest.lock */,
 				FC3F3A6A1C9AA39D0027D5D0 /* Sources */,
 				FC3F3A6B1C9AA39D0027D5D0 /* Frameworks */,
 				FC3F3A6C1C9AA39D0027D5D0 /* Resources */,
+				F8595D8ADE7893E96F56AC1F /* Embed Pods Frameworks */,
+				7CE4E2D77504248F6F7ABD81 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,7 +282,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC3F3A841C9AA39E0027D5D0 /* LaunchScreen.storyboard in Resources */,
 				FC3F3A811C9AA39E0027D5D0 /* Assets.xcassets in Resources */,
 				FC3F3A7C1C9AA39D0027D5D0 /* Main.storyboard in Resources */,
 			);
@@ -268,15 +303,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23D6FE7579B140CCD3FFB5C7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7CE4E2D77504248F6F7ABD81 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8595D8ADE7893E96F56AC1F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC3F3A6A1C9AA39D0027D5D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FC3F3A7F1C9AA39D0027D5D0 /* BlueTooth.xcdatamodeld in Sources */,
-				FC3F3A791C9AA39D0027D5D0 /* ViewController.m in Sources */,
+				FC3F3AA91C9AA44F0027D5D0 /* ItemViewController.m in Sources */,
 				FC3F3A761C9AA39D0027D5D0 /* AppDelegate.m in Sources */,
 				FC3F3A731C9AA39D0027D5D0 /* main.m in Sources */,
+				FC3F3AAC1C9AA4820027D5D0 /* RootViewController.m in Sources */,
+				FC3F3AAF1C9AA4900027D5D0 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,14 +405,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		FC3F3A821C9AA39E0027D5D0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC3F3A831C9AA39E0027D5D0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -357,6 +434,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BlueTooth/config.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -398,6 +476,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BlueTooth/config.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -413,6 +492,7 @@
 		};
 		FC3F3A9F1C9AA39E0027D5D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A5926301A6D9C6D89D12001 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BlueTooth/Info.plist;
@@ -424,6 +504,7 @@
 		};
 		FC3F3AA01C9AA39E0027D5D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD0B71D82DA528F9F63662CA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BlueTooth/Info.plist;
@@ -500,6 +581,7 @@
 				FC3F3AA01C9AA39E0027D5D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC3F3AA11C9AA39E0027D5D0 /* Build configuration list for PBXNativeTarget "BlueToothTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +590,7 @@
 				FC3F3AA31C9AA39E0027D5D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC3F3AA41C9AA39E0027D5D0 /* Build configuration list for PBXNativeTarget "BlueToothUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +599,7 @@
 				FC3F3AA61C9AA39E0027D5D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
