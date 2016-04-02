@@ -2,145 +2,238 @@
 //  RootViewController.m
 //  BlueTooth
 //
-//  Created by kong on 16/3/17.
+//  Created by kong on 16/4/2.
 //  Copyright © 2016年 kong. All rights reserved.
 //
 
 #import "RootViewController.h"
-
-//导入蓝牙第三方库
+#import <CoreBluetooth/CoreBluetooth.h>
 #import "BabyBluetooth.h"
+#import "ScanTableViewCell.h"
+#import "ScanModel.h"
 
-@interface RootViewController (){
-
-    BabyBluetooth *_blueTooth;
-    
-    NSMutableArray *_peripherials; //外设
-    
-    NSMutableArray *_periphetialsAD;//外设services
-}
+@interface RootViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
-@implementation RootViewController
+@implementation RootViewController{
+
+    //TODO: 扫描结果TableView
+    UITableView *_scanTableView;
+    
+    //TODO: 扫描结果TableView的数据源
+    NSArray *_dataArr;
+    
+    //TODO: 蓝牙
+    BabyBluetooth *_buleTooth;
+    
+    //TODO: 装外设数组
+    NSMutableArray *_perisMarr;
+    
+    //TODO: 装外设的AD数组
+    NSMutableArray *_perisADMarr;
+    
+    //TODO: 装RSSI的数组
+    NSMutableArray *_modelMArr;
+    
+    //TODO: model
+    ScanModel *_model;
+}
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-
-    self.view.backgroundColor = [UIColor orangeColor];
-    
-    self.title = @"首页";
     
     [self initUI];
-    
+
 }
 
-
 /**
- *  初始化UI
+ *  初始化UI界面
  */
 - (void)initUI{
     
-    _blueTooth = [BabyBluetooth shareBabyBluetooth];
+    //扫描按钮
+    UIButton *scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    _peripherials = [NSMutableArray array];
+    [scanButton setTitle:@"扫描" forState:UIControlStateNormal];
     
-    _periphetialsAD = [NSMutableArray array];
+    scanButton.backgroundColor = [UIColor blueColor];
+    
+    scanButton.frame = CGRectMake(20, KScreenHeight - 49 - 100, 100, 80);
+    
+    [scanButton addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:scanButton];
     
     
-    //蓝牙网管设置
-//    [self blueToothDelegate];
+    //装设备的TableView
+    _scanTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, KScreenWidth, KScreenHeight - 49 - 200 - 30 ) style:UITableViewStylePlain];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    _scanTableView.backgroundColor = [UIColor orangeColor];
     
-    button.frame = CGRectMake(( KScreenWidth - 100 ) / 2, ( KScreenHeight - 50 ) / 2, 100, 50);
+    _scanTableView.delegate = self;
     
-    [button setTitle:@"蓝牙连接" forState:UIControlStateNormal];
+    _scanTableView.dataSource = self;
     
-    button.backgroundColor = [UIColor blueColor];
+    _scanTableView.rowHeight = 100;
     
-    [button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_scanTableView];
     
-    [self.view addSubview:button];
 }
 
 /**
- *  蓝牙连接按钮
+ *  开始扫描
  *
  *  @param btn
  */
-- (void)btnClick:(UIButton *)btn{
+- (void)btnClick:(UIButton *)btn
+{
     
-    [SVProgressHUD showInfoWithStatus:@"准备打开蓝牙"];
-      
-    //蓝牙高级设置
-    _blueTooth.scanForPeripherals().connectToPeripherals().discoverServices().discoverCharacteristics().readValueForCharacteristic().discoverDescriptorsForCharacteristic().readValueForCharacteristic().begin();
+    [self setBlueTooth];
+}
 
+/**
+ *  初始化BlueTooth
+ */
+- (void)setBlueTooth
+{
+    //TODO: 提示
+    [SVProgressHUD showInfoWithStatus:@"请打开设备蓝牙"];
+    
+    //TODO: 单例模式初始化创建一个蓝牙对象
+    _buleTooth = [BabyBluetooth shareBabyBluetooth];
+    
+    //TODO: 初始化数据
+    _perisADMarr = [NSMutableArray array];
+    
+    _perisMarr = [NSMutableArray array];
+    
+    _modelMArr = [NSMutableArray array];
+    
+    /**
+     *  PS:此时用[NSMutableArray array]创建数组和[[NSMutableArray alloc] init]的区别
+     *  1.[[NSMutableArray alloc] init]创建之后,内存释放方式为release
+     *  2.[NSMutableArray array] 创建之后，内存释放方式为 autorelease
+     */
+    
+    //TODO: 设置蓝牙代理
+    [self blueToothSetting];
 
 }
 
 /**
- *  蓝牙网管设置
+ *  蓝牙网关设置和代理设置
  */
-- (void)blueToothDelegate{
+- (void)blueToothSetting
+{
+    //取消所有连接
+    [_buleTooth cancelAllPeripheralsConnection];
     
-    __weak typeof(self) weakself = self;
+    //开始连接
+    _buleTooth.scanForPeripherals().begin();
     
-    //打开蓝牙 开始扫描
-    [_blueTooth setBlockOnCentralManagerDidUpdateState:^(CBCentralManager *central) {
-       
-        if (central.state == CBCentralManagerStatePoweredOn) {
-            
-            [SVProgressHUD showInfoWithStatus:@"设备已经打开蓝牙,开始扫描"];
-            
-            NSLog(@"打开了蓝牙,正在扫描");
+    __weak typeof(self) weakSelf = self;
+    
+    //TODO: 打开蓝牙之后开始扫描
+    [_buleTooth setBlockOnCentralManagerDidUpdateState:^(CBCentralManager *central)
+    {
+        if (central.state == CBCentralManagerStatePoweredOn)
+        {
+            [SVProgressHUD showInfoWithStatus:@"蓝牙已经打开"];
         }
     }];
     
-    //扫描设备
-    [_blueTooth setBlockOnDiscoverToPeripherals:^(CBCentralManager *central, CBPeripheral *peripheral, NSDictionary *advertisementData, NSNumber *RSSI) {
+    //TODO: 扫描到设备
+    [_buleTooth setBlockOnDiscoverToPeripherals:^(CBCentralManager *central, CBPeripheral *peripheral, NSDictionary *advertisementData, NSNumber *RSSI)
+    {
+        NSLog(@"扫描到了设备 RSSI IS %@",RSSI);
         
-        //扫描弹框提示是否连接该设备
-        [weakself showAlert:peripheral.name];
+       //成功扫描到设备 并把数据插入tableView  peripheral装入数组 advertisementData装入 ad数组
+        [weakSelf insertTableview:peripheral With:advertisementData And:RSSI];
         
-        NSLog(@"扫描到了设备:%@",peripheral.name);
     }];
     
+    
+    
+
 }
 
 /**
- *  弹框提醒
+ *  扫描到的设备数据插入tableViewCell中
  *
- *  @param periphirialsName 外设名称
+ *  @param peripheral
+ *  @param advertisementData
  */
-- (void)showAlert:(NSString *)periphirialsName{
+- (void)insertTableview:(CBPeripheral *)peripheral With:(NSDictionary *)advertisementData And:(NSNumber *)RSSI{
     
-   //使用UIAlertView的时候被告知 已经被弃用  官方SDK的方法是
-    /*
-     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"My Alert"
-     message:@"This is an alert."
-     preferredStyle:UIAlertControllerStyleAlert];
-     
-     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-     handler:^(UIAlertAction * action) {}];
-     
-     [alert addAction:defaultAction];
-     [self presentViewController:alert animated:YES completion:nil];
-     */
-    
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"你确定要与“%@”连接吗？",periphirialsName] preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    //如果数组中不包含 就添加
+    if (![_perisMarr containsObject:peripheral])
+    {
         
-    }];
-    
-    [alert addAction:action];
-    
-    [self presentViewController:alert animated:YES completion:nil];
+        [_perisMarr addObject:peripheral];
+        
+        [_perisADMarr addObject:advertisementData];
+        
+        //构建NSIndexPath的数组
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:_perisMarr.count - 1 inSection:0];
+        
+        NSMutableArray *indexPathMArr = [[NSMutableArray alloc] init];
+        
+        [indexPathMArr addObject:indexPath];
+        
+        //装入model
+        if (_model == nil)
+        {
+            _model = [[ScanModel alloc] init];
+        }
+        
+        _model.name = peripheral.name;
+        
+        if (peripheral.name == nil)
+        {
+            _model.name = @"";
+        }
+        
+        _model.RSSI = RSSI;
+        
+        if (RSSI == nil)
+        {
+            _model.RSSI = @0;
+        }
+  
+        [_modelMArr addObject:_model];
+        
+        //把相应数据插入cell中
+        [_scanTableView insertRowsAtIndexPaths:indexPathMArr withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
+#pragma Mark----UITableViewDelegate
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
 
+    return _perisMarr.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static NSString *identifier = @"identify";
+    
+    ScanTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
+    if (cell == nil)
+    {
+        
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"ScanTableViewCell" owner:nil options:nil]lastObject];
+    }
+    
+    //TODO: 处理cell的赋值问题
+    cell.model = _modelMArr[indexPath.row];
+    
+    return cell;
+}
 
 @end

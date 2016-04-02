@@ -16,8 +16,11 @@
 		FC3F3A8F1C9AA39E0027D5D0 /* BlueToothTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3F3A8E1C9AA39E0027D5D0 /* BlueToothTests.m */; };
 		FC3F3A9A1C9AA39E0027D5D0 /* BlueToothUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3F3A991C9AA39E0027D5D0 /* BlueToothUITests.m */; };
 		FC3F3AA91C9AA44F0027D5D0 /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3F3AA81C9AA44F0027D5D0 /* ItemViewController.m */; };
-		FC3F3AAC1C9AA4820027D5D0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3F3AAB1C9AA4820027D5D0 /* RootViewController.m */; };
 		FC3F3AAF1C9AA4900027D5D0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3F3AAE1C9AA4900027D5D0 /* DetailViewController.m */; };
+		FCF0FA321CAFCCFE00ECE62D /* ScanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF0FA301CAFCCFE00ECE62D /* ScanTableViewCell.m */; };
+		FCF0FA331CAFCCFE00ECE62D /* ScanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF0FA311CAFCCFE00ECE62D /* ScanTableViewCell.xib */; };
+		FCF18D721CAFAC0900CD16C3 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF18D711CAFAC0900CD16C3 /* RootViewController.m */; };
+		FCF18D7A1CAFB21D00CD16C3 /* ScanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF18D791CAFB21D00CD16C3 /* ScanModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +60,16 @@
 		FC3F3A9B1C9AA39E0027D5D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3F3AA71C9AA44F0027D5D0 /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
 		FC3F3AA81C9AA44F0027D5D0 /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
-		FC3F3AAA1C9AA4820027D5D0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		FC3F3AAB1C9AA4820027D5D0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		FC3F3AAD1C9AA4900027D5D0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		FC3F3AAE1C9AA4900027D5D0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		FC9D34831C9AB80000196193 /* config.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.pch; sourceTree = "<group>"; };
+		FCF0FA2F1CAFCCFE00ECE62D /* ScanTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanTableViewCell.h; sourceTree = "<group>"; };
+		FCF0FA301CAFCCFE00ECE62D /* ScanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanTableViewCell.m; sourceTree = "<group>"; };
+		FCF0FA311CAFCCFE00ECE62D /* ScanTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanTableViewCell.xib; sourceTree = "<group>"; };
+		FCF18D701CAFAC0900CD16C3 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		FCF18D711CAFAC0900CD16C3 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		FCF18D781CAFB21D00CD16C3 /* ScanModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanModel.h; sourceTree = "<group>"; };
+		FCF18D791CAFB21D00CD16C3 /* ScanModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +145,7 @@
 				FC9D34831C9AB80000196193 /* config.pch */,
 				FC3F3AA71C9AA44F0027D5D0 /* ItemViewController.h */,
 				FC3F3AA81C9AA44F0027D5D0 /* ItemViewController.m */,
-				FC3F3AAA1C9AA4820027D5D0 /* RootViewController.h */,
-				FC3F3AAB1C9AA4820027D5D0 /* RootViewController.m */,
+				FCF18D741CAFAF0700CD16C3 /* 首页 */,
 				FC3F3AAD1C9AA4900027D5D0 /* DetailViewController.h */,
 				FC3F3AAE1C9AA4900027D5D0 /* DetailViewController.m */,
 				FC3F3A7A1C9AA39D0027D5D0 /* Main.storyboard */,
@@ -174,6 +181,44 @@
 				FC3F3A9B1C9AA39E0027D5D0 /* Info.plist */,
 			);
 			path = BlueToothUITests;
+			sourceTree = "<group>";
+		};
+		FCF18D741CAFAF0700CD16C3 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				FCF18D761CAFAF1700CD16C3 /* Model */,
+				FCF18D771CAFAF1A00CD16C3 /* View */,
+				FCF18D751CAFAF0C00CD16C3 /* Controller */,
+			);
+			name = "首页";
+			sourceTree = "<group>";
+		};
+		FCF18D751CAFAF0C00CD16C3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCF18D701CAFAC0900CD16C3 /* RootViewController.h */,
+				FCF18D711CAFAC0900CD16C3 /* RootViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FCF18D761CAFAF1700CD16C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FCF18D781CAFB21D00CD16C3 /* ScanModel.h */,
+				FCF18D791CAFB21D00CD16C3 /* ScanModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FCF18D771CAFAF1A00CD16C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCF0FA2F1CAFCCFE00ECE62D /* ScanTableViewCell.h */,
+				FCF0FA301CAFCCFE00ECE62D /* ScanTableViewCell.m */,
+				FCF0FA311CAFCCFE00ECE62D /* ScanTableViewCell.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +291,7 @@
 				TargetAttributes = {
 					FC3F3A6D1C9AA39D0027D5D0 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = JL84946HRV;
 					};
 					FC3F3A891C9AA39E0027D5D0 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -283,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3F3A811C9AA39E0027D5D0 /* Assets.xcassets in Resources */,
+				FCF0FA331CAFCCFE00ECE62D /* ScanTableViewCell.xib in Resources */,
 				FC3F3A7C1C9AA39D0027D5D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,9 +405,11 @@
 			files = (
 				FC3F3A7F1C9AA39D0027D5D0 /* BlueTooth.xcdatamodeld in Sources */,
 				FC3F3AA91C9AA44F0027D5D0 /* ItemViewController.m in Sources */,
+				FCF18D721CAFAC0900CD16C3 /* RootViewController.m in Sources */,
 				FC3F3A761C9AA39D0027D5D0 /* AppDelegate.m in Sources */,
+				FCF18D7A1CAFB21D00CD16C3 /* ScanModel.m in Sources */,
 				FC3F3A731C9AA39D0027D5D0 /* main.m in Sources */,
-				FC3F3AAC1C9AA4820027D5D0 /* RootViewController.m in Sources */,
+				FCF0FA321CAFCCFE00ECE62D /* ScanTableViewCell.m in Sources */,
 				FC3F3AAF1C9AA4900027D5D0 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,10 +544,14 @@
 			baseConfigurationReference = 4A5926301A6D9C6D89D12001 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BlueTooth/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swift.BlueTooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -507,10 +560,14 @@
 			baseConfigurationReference = CD0B71D82DA528F9F63662CA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BlueTooth/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swift.BlueTooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
